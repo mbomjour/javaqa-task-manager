@@ -1,4 +1,5 @@
 package ru.netology.tasks;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +29,7 @@ public class TasksTest {
 
     @Test
     public void findIfMatchEpic() {
-        String[] subtasks = { "Планирование" , "Запуск" , "Тест" , "Обратная связь"};
+        String[] subtasks = {"Планирование", "Запуск", "Тест", "Обратная связь"};
         Task epic = new Epic(3, subtasks);
         String query = "Тест";
 
@@ -40,8 +41,8 @@ public class TasksTest {
 
     @Test
     public void notFindIfMismatchEpic() {
-        String[] subtasks = { "Планирование" , "Запуск" , "Тест" , "Обратная связь"};
-        Task epic = new Epic(4, subtasks);
+        String[] subtasks = {"Планирование", "Запуск", "Тест", "Обратная связь"};
+        Task epic = new Epic(3, subtasks);
         String query = "Ревью";
 
         boolean expected = false;
@@ -51,9 +52,9 @@ public class TasksTest {
     }
 
     @Test
-    public  void findIfMatchTopicMeeting() {
+    public void findIfMatchTopicMeeting() {
         Task meeting = new Meeting(
-                5,
+                4,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
@@ -67,9 +68,9 @@ public class TasksTest {
     }
 
     @Test
-    public  void findIfMatchProjectMeeting() {
+    public void findIfMatchProjectMeeting() {
         Task meeting = new Meeting(
-                6,
+                4,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
@@ -83,9 +84,9 @@ public class TasksTest {
     }
 
     @Test
-    public  void notFindIfMismatchMeeting() {
+    public void notFindIfMismatchMeeting() {
         Task meeting = new Meeting(
-                7,
+                4,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
                 "Во вторник после обеда"

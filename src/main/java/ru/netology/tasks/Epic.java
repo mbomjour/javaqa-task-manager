@@ -1,4 +1,5 @@
 package ru.netology.tasks;
+
 public class Epic extends Task {
     protected String[] subtasks;
 

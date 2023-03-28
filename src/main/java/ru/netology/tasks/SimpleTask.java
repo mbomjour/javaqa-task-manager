@@ -1,4 +1,5 @@
 package ru.netology.tasks;
+
 public class SimpleTask extends Task {
     protected String title;
 
